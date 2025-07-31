@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--My Css-->
+    <link rel="stylesheet" href="style.css">
+    <!--Link to Font Awesome CDN-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="collection.js" defer></script>
+    <link rel="icon" href="icon.jpg">
+</head>
+
+
+<body>
+
+    <!--Navbar-->
+    <nav class=" navbar">
+        <h1>Nostra</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+
+        </div>
+
+        <div class="hambergur">
+            <i class="fas fa-bars" id="menu-icon"></i>
+        </div>
+
+
+
+
+    </nav>
+    <!--Side Navbar-->
+    <div class="side-navbar">
+        <p style="text-align: right;">
+            <i class="fa-solid fa-xmark" id="close-icon"></i>
+
+
+
+        <p class="side-navbar-link"><a href="index.html">Home</a></p>
+        <p class="side-navbar-link"><a href="collection.html">Collections</a></p>
+        <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+        </p>
+
+    </div>
+    <!--Contact-->
+
+    
+    <div class="contact-box">
+  <h2>Contact Us</h2>
+  <form action="http://localhost:5000/contact" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Address:</label>
+    <input type="text" name="address">
+
+    <label>Feedback:</label>
+    <input type="text" name="feedback">
+
+    <label>Problem faced:</label>
+    <input type="text" name="problem">
+
+    <div class="button-group">
+  <button type="submit">Submit</button>
+  <button type="reset">Clear</button>
+</div>
+  </form>
+</div>
+<script>
+document.getElementById("menu-icon").onclick = function(){
+var sidenav = document.querySelector(".side-navbar");
+sidenav.style.left="0";
+}
+document.getElementById("close-icon").onclick = function(){
+var sidenav = document.querySelector(".side-navbar");
+sidenav.style.left="-48%";
+}
+  document.getElementById("clearBtn").addEventListener("click", function () {
+    document.getElementById("contactForm").reset();
+  });
+</script>
+    
+    
+    </div>
+    </div>
+     <!--Fooeter-->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h2 class="headingtext">Nostra</h2>
+                <p>Stay connected and never miss a moment of style! Follow us on Instagram for daily fashion
+                    inspiration, behind-the-scenes looks, and the latest trends. Join the conversation on Twitter for
+                    real-time updates, style tips, and exclusive offers. </p>
+                <div class="footer-icon-container">
+                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+                </div>
+            </div>
+        </div>
+        <p>@ 2024 Nostra.com</p>
+    </div>

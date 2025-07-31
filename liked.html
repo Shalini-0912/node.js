@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Liked Images</title>
+  <style>
+    #liked-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .liked-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      background-color: #fff;
+    }
+    .liked-card img {
+      width: 150px;
+      border-radius: 5px;
+    }
+    .liked-card button {
+      margin-top: 10px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .liked-card button:hover {
+      background-color: #e60000;
+    }
+  </style>
+</head>
+<body>
+  <h2>Liked Images</h2>
+  <div id="liked-items"></div>
+
+  <script>
+    // ✅ Fetch liked items for user123
+   fetch("http://localhost:5000/liked/user123")
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById("liked-items");
+    container.innerHTML = "";
+
+    if (data.length === 0) {
+      container.innerHTML = "<p>No liked items yet.</p>";
+      return;
+    }
+
+    data.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "liked-card";
+
+      // ✅ PASTE HERE
+      div.innerHTML = `
+        <img src="${item.imageName}" alt="Liked item" />
+        <p><strong>Product ID:</strong> ${item.productId}</p>
+        <p><strong>User ID:</strong> ${item.userId}</p>
+        <p><strong>Liked At:</strong> ${new Date(item.likedAt).toLocaleString()}</p>
+        <button onclick="removeLike('${item._id}', this)">Remove</button>
+      `;
+
+      container.appendChild(div);
+    });
+  })
+  .catch(err => console.error("Error fetching liked items:", err));
+    // ✅ Remove Like by _id
+    function removeLike(likeId, button) {
+  console.log("🖱️ Remove clicked, ID:", likeId);
+
+  fetch("http://localhost:5000/unlike", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ id: likeId })
+  })
+    .then(res => res.json())
+    .then(data => {
+      console.log("🔄 Server Response:", data);
+      if (data.message) {
+        alert(data.message);
+        button.closest(".liked-card").remove();
+      } else {
+        alert("Failed to remove like.");
+      }
+    })
+    .catch(err => console.error("❌ Error removing like:", err));
+}
+  </script>
+</body>
+</html>

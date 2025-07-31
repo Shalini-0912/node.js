@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostra</title>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--My Css-->
+    <link rel="stylesheet" href="style.css">
+    <!--Link to Font Awesome CDN-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="collection.js" defer></script>
+    <link rel="icon" href="icon.jpg">
+</head>
+
+
+<body>
+
+    <!--Navbar-->
+    <nav class=" navbar">
+        <h1>Nostra</h1>
+        <div class="navbar-links">
+            <p class="navbar-link"><a href="index.html">Home</a></p>
+            <p class="navbar-link"><a href="collection.html">Collections</a></p>
+            <p class="navbar-link"><a href="contact.html">Contact</a></p>
+
+        </div>
+
+        <div class="hambergur">
+            <i class="fas fa-bars" id="menu-icon"></i>
+        </div>
+
+
+
+
+    </nav>
+    <!--Side Navbar-->
+    <div class="side-navbar">
+        <p style="text-align: right;">
+            <i class="fa-solid fa-xmark" id="close-icon"></i>
+
+
+
+        <p class="side-navbar-link"><a href="index.html">Home</a></p>
+        <p class="side-navbar-link"><a href="collection.html">Collections</a></p>
+        <p class="side-navbar-link"><a href="contact.html">Contact</a></p>
+        </p>
+
+    </div>
+    <!--Product-->
+    <div class="product-section">
+        <form class="product-search">
+            <input type="text" id="search" placeholder="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+        <div class="products" id="products">
+
+            <div class="products-box">
+                <img src="frock.jpg" width="200px" height="200px">
+                <p>White frock</p>
+                 <button onclick="likeImage('shalu','product1','frock.jpg', this)">
+    <i class="fa-regular fa-heart"></i> Like 
+  </button>
+  <button onclick="removeLike('shalu', 'product1','frock.jpg', this)">Remove Like</button>
+
+                <div class="price-like">
+              
+                <p class="price">₹2999</p>
+                
+                </div>
+                 <button onclick="buyNow('frock.jpg')">Buy Now</button>
+
+            </div>
+            <div class="products-box">
+                <img src="shirt.jpg" width="200px" height="200px">
+                <p>Shirts</p>
+                <button onclick="likeImage('esha','product2','shirt.jpg', this)">
+    <i class="fa-regular fa-heart"></i> Like
+  </button>
+  <button onclick="removeLike('esha', 'product2','shirt.jpg', this)">Remove Like</button>
+
+  <div class="price-like">
+              
+                <p class="price">₹1299</p>
+                
+                </div>
+
+            </div>
+            <div class="products-box">
+                <img src="shirt2.webp" width="200px" height="200px">
+                <p>Shirts</p>
+                 <button onclick="likeImage('user123','product3','shirt2.webp', this)">
+    <i class="fa-regular fa-heart"></i> Like
+  </button>
+  <button onclick="removeLike('user123', 'product3','shirt2.webp', this)">Remove Like</button>
+
+  <div class="price-like">
+              
+                <p class="price">₹1999</p>
+                
+                </div>
+            </div>
+            <div class="products-box">
+                <img src="shirt3.avif" width="200px" height="200px">
+                <p>Shirts</p>
+                 <button onclick="likeImage('user123','product4','shirt3.avif', this)">
+    <i class="fa-regular fa-heart"></i> Like
+  </button>
+  <button onclick="removeLike('user123', 'product4','shirt3.avif', this)">Remove Like</button>
+
+  <div class="price-like">
+              
+                <p class="price">₹1557</p>
+                
+                </div>
+            </div>
+            <div class="products-box">
+                <img src="shirt4.webp" width="200px" height="200px">
+                <p> White Shirt</p>
+                 <button onclick="likeImage('user123','product5','shirt4.webp', this)">
+    <i class="fa-regular fa-heart"></i> Like
+  </button>
+  <button onclick="removeLike('user123', 'shirt4.webp', this)">Remove Like</button>
+
+  <div class="price-like">
+              
+                <p class="price">₹999</p>
+                
+                </div>
+            </div>
+            <div class="products-box">
+                <img src="tops1.jpg" width="200px" height="200px">
+                <p>Top</p>
+                 <button onclick="likeImage('user123','product6','tops1.jpg', this)">
+    <i class="fa-regular fa-heart"></i> Like
+  </button>
+  <button onclick="removeLike('user123', 'product6','tops1.jpg', this)">Remove Like</button>
+
+  <div class="price-like">
+              
+                <p class="price">₹599</p>
+                
+                </div>
+            </div>
+            <div class="products-box">
+                <img src="frock2.jpg" width="200px" height="200px">
+                <p>White frock</p>
+                 <button onclick="likeImage('user123','product7','frock2.jpg', this)">
+    <i class="fa-regular fa-heart"></i> Like
+  </button>
+  <button onclick="removeLike('user123', 'product7','frock2.jpg', this)">Remove Like</button>
+
+  <div class="price-like">
+              
+                <p class="price">₹2000</p>
+                
+                </div>
+            </div>
+            <div class="products-box">
+                <img src="tops.jpg" width="200px" height="200px">
+                <p>Top</p>
+                 <button onclick="likeImage('user123','product8','tops.jpg', this)">
+    <i class="fa-regular fa-heart"></i> Like
+  </button>
+  <button onclick="removeLike('user123', 'product8','tops.jpg', this)">Remove Like</button>
+
+  <div class="price-like">
+              
+                <p class="price">₹450</p>
+                
+                </div>
+            </div>
+            <div class="products-box">
+                <img src="frock3.webp" width="200px" height="200px">
+                <p>White frock</p>
+                 <button onclick="likeImage('user123','product9','frock3.webp', this)">
+    <i class="fa-regular fa-heart"></i> Like
+  </button>
+
+<button onclick="removeLike('user123', 'product9','frock3.webp', this)">Remove Like</button>
+
+  <div class="price-like">
+              
+                <p class="price">₹1450</p>
+                
+                </div>
+            </div>
+            <div class="products-box">
+                <img src="jeans.jpg" width="200px" height="200px">
+                <p>Jeans</p>
+                 <button onclick="likeImage('user123','product10','jeans.jpg', this)">
+  <i class="fa-regular fa-heart"></i> Like
+</button>
+
+  <button onclick="removeLike('user123', 'product10','jeans.jpg', this)">Remove Like</button>
+
+  <div class="price-like">
+              
+                <p class="price">₹599</p>
+                
+                </div>
+            </div>
+            <div class="products-box">
+                <img src="saree.jpeg" width="200px" height="200px">
+                <p>Saree</p>
+                 <button onclick="likeImage('user123','product11','saree.jpeg', this)">
+    <i class="fa-regular fa-heart"></i> Like
+  </button>
+  <button onclick="removeLike('user123', 'product11','saree.jpeg', this)">Remove Like</button>
+
+  <div class="price-like">
+              
+                <p class="price">₹1599</p>
+                
+                </div>
+            </div>
+            <div class="products-box">
+                <img src="saree.jpg" width="200px" height="200px">
+                <p>Saree</p>
+                 <button 
+  data-user="user123" 
+  data-product="product2" 
+  data-image="saree.jpg"
+  onclick="likeImage(this.dataset.user, this.dataset.product, this.dataset.image, this)">
+  ❤ Like Saree
+</button>
+
+  <button onclick="removeLike('${item._id}', this)">Remove</button>
+
+
+  <div class="price-like">
+              
+                <p class="price">₹1299</p>
+                
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        document.getElementById("menu-icon").onclick = function(){
+var sidenav = document.querySelector(".side-navbar");
+sidenav.style.left="0";
+}
+document.getElementById("close-icon").onclick = function(){
+var sidenav = document.querySelector(".side-navbar");
+sidenav.style.left="-48%";
+}
+
+  
+</script>
+
+
+  <script>
+function likeImage(userId, productId, imageName, button) {
+  console.log("➡️ Sending Like:", { userId, productId, imageName });
+
+  fetch("http://localhost:5000/like", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ userId, productId, imageName })
+  })
+    .then(res => res.json())
+    .then(data => {
+      console.log("Response from server:", data);
+      alert(data.message || "Like request sent.");
+
+      // ✅ Disable button if liked successfully
+      if (data.message === "Liked image saved successfully!") {
+        button.disabled = true;
+        button.innerText = "❤ Liked";
+      } 
+      else if (data.message === "Already liked") {  // 🔹 Removed "!"
+        button.disabled = true;
+        button.innerText = "❤ Already Liked";
+      }
+    })
+    .catch(err => {
+      console.error("Error:", err);
+      alert("Something went wrong!");
+    });
+}
+
+</script>
+
+
+
+<script>
+
+function removeLike(likeId, button) {
+  console.log("🗑 Removing Like:", likeId);
+
+  fetch("http://localhost:5000/unlike", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ id: likeId }) // ✅ send _id
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.message) {
+      alert(data.message);
+      button.closest(".liked-card").remove(); // ✅ remove card without reload
+    } else {
+      alert("Failed to remove like.");
+    }
+  })
+  .catch(err => console.error("Error removing like:", err));
+}
+</script>
+
+</script>
+<script>
+function buyNow(productId) {
+  fetch("http://localhost:5000/buy", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ productId })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.checkoutUrl) {
+      window.location.href = data.checkoutUrl; // redirect to checkout
+    } else {
+      alert("Failed to start checkout");
+    }
+  });
+}
+</script>
+<script>
+  function loadLikedImages() {
+    fetch("http://localhost:5000/liked")
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById("liked-images");
+        container.innerHTML = "";
+
+        data.forEach(item => {
+          const img = document.createElement("img");
+          img.src = item.likeName; // image filename
+          img.alt = "Liked Image";
+          img.style.width = "150px";
+          img.style.margin = "10px";
+          container.appendChild(img);
+        });
+      });
+  }
+
+  // Call this after liking or on page load
+  window.onload = loadLikedImages;
+</script>
+
+
+<div id="liked-images" class="liked-images-container"></div>
+
+    <!--Footer-->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h2 class="headingtext">Nostra</h2>
+                <p>Stay connected and never miss a moment of style! Follow us on Instagram for daily fashion
+                    inspiration, behind-the-scenes looks, and the latest trends. Join the conversation on Twitter for
+                    real-time updates, style tips, and exclusive offers. </p>
+                <div class="footer-icon-container">
+                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+                </div>
+            </div>
+        </div>
+        <p>@ 2024 Nostra.com</p>
+        <a href="liked.html">View Liked Items</a>
+    </div>
+    
